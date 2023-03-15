@@ -6,6 +6,7 @@ import Skills from '../about/professional-info/Skills';
 import Certificates from '../about/professional-info/Certificates';
 import Awards from '../about/professional-info/Awards';
 import Resume from '../about/professional-info/Resume';
+import Capstone from '../about/professional-info/Capstone';
 import CodeShowcase from '../about/CodeShowcase';
 
 
@@ -42,6 +43,12 @@ export default function ProfessionalSideBar() {
             name: "resume",
             svgPath: "M16 2l5 5v14.008a.993.993 0 0 1-.993.992H3.993A1 1 0 0 1 3 21.008V2.992C3 2.444 3.445 2 3.993 2H16zm1.657 10L14.12 8.464 12.707 9.88 14.828 12l-2.12 2.121 1.413 1.415L17.657 12zM6.343 12l3.536 3.536 1.414-1.415L9.172 12l2.12-2.121L9.88 8.464 6.343 12z",
             color: "rgba(201,139,223,1)"
+        },
+        {
+            id: 6,
+            name: "capstone",
+            svgPath: "M10 8h4V6.5a3.5 3.5 0 1 1 3.5 3.5H16v4h1.5a3.5 3.5 0 1 1-3.5 3.5V16h-4v1.5A3.5 3.5 0 1 1 6.5 14H8v-4H6.5A3.5 3.5 0 1 1 10 6.5V8zM8 8V6.5A1.5 1.5 0 1 0 6.5 8H8zm0 8H6.5A1.5 1.5 0 1 0 8 17.5V16zm8-8h1.5A1.5 1.5 0 1 0 16 6.5V8zm0 8v1.5a1.5 1.5 0 1 0 1.5-1.5H16zm-6-6v4h4v-4h-4z",
+            color: "rgba(51,187,198,1)"
         }
     ];
     const handleItemClick = (pageName, itemId) => {
@@ -60,10 +67,13 @@ export default function ProfessionalSideBar() {
             activeComponent = <Certificates />;
             break;
         case 4:
-            activeComponent = <Awards/>;
+            activeComponent = <Awards />;
             break;
         case 5:
             activeComponent = <Resume />
+            break;
+        case 6:
+            activeComponent = <Capstone />
             break;
         default:
             activeComponent = null;
